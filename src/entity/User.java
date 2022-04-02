@@ -13,14 +13,14 @@ import java.util.Date;
  */
 public class User {
     private int id,cin;
-    private String username, prenom, genre,email,password,adresse;
-    private Date date_naissance;
+    private String username, prenom, genre,email,password,adresse, date_naissance;
+   
 
     public User() {
     }
 
     
-    public User(int id, int cin, String username, String prenom, String genre, String email, String password, String adresse, Date date_naissance) {
+    public User(int id, int cin, String username, String prenom, String genre, String email, String password, String adresse, String date_naissance) {
         this.id = id;
         this.cin = cin;
         this.username = username;
@@ -32,7 +32,7 @@ public class User {
         this.date_naissance = date_naissance;
     }
 
-    public User(int cin, String username, String prenom, String genre, String email, String password, String adresse, Date date_naissance) {
+    public User(int cin, String username, String prenom, String genre, String email, String password, String adresse, String date_naissance) {
         this.cin = cin;
         this.username = username;
         this.prenom = prenom;
@@ -75,7 +75,7 @@ public class User {
         return adresse;
     }
 
-    public Date getDate_naissance() {
+    public String getDate_naissance() {
         return date_naissance;
     }
     
@@ -114,11 +114,16 @@ public class User {
         this.adresse = adresse;
     }
 
-    public void setDate_naissance(Date date_naissance) {
+    public void setDate_naissance(String date_naissance) {
         this.date_naissance = date_naissance;
     }
 
-    
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id + ", cin=" + cin + ", username=" + username + ", prenom=" + prenom + ", genre=" + genre + ", email=" + email + ", password=" + password + ", adresse=" + adresse + ", date_naissance=" + date_naissance + '}';
+    }
+
+   
     
     
     

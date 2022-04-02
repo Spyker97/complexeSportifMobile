@@ -107,9 +107,9 @@ public class SignUpForm extends BaseForm {
         next.requestFocus();
         next.addActionListener(e -> {
             
-             user.setCin(Integer.parseInt(cin.getText()) );
+        user.setCin(Integer.parseInt(cin.getText()) );
         user.setAdresse(adresse.getText());
-        user.setDate_naissance(date_naissance.getDate());
+        user.setDate_naissance(date_naissance.getText());
         user.setEmail(email.getText());
         user.setGenre(genre.getText());
         user.setPassword(password.getText());

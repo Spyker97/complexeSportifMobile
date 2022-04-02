@@ -84,6 +84,9 @@ public class BaseForm extends Form {
         
         tb.addMaterialCommandToSideMenu("Newsfeed", FontImage.MATERIAL_UPDATE, e -> new NewsfeedForm(res).show());
         tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_SETTINGS, e -> new ProfileForm(res).show());
+        tb.addMaterialCommandToSideMenu("terrain", FontImage.MATERIAL_SETTINGS, e -> new AddterrainForm(this).show());
+        tb.addMaterialCommandToSideMenu("Liste de Terrains", FontImage.MATERIAL_SETTINGS, e -> new ListTerrainForm(this).show());
+        tb.addMaterialCommandToSideMenu("Liste User", FontImage.MATERIAL_EXIT_TO_APP, e -> new ListeUserr(res).show());
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new WalkthruForm(res).show());
     }
 }

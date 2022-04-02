@@ -19,6 +19,7 @@
 
 package gui;
 
+import com.codename1.components.OnOffSwitch;
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.ui.CheckBox;
 import com.codename1.ui.Component;
@@ -83,10 +84,29 @@ public class ProfileForm extends BaseForm {
         TextField username = new TextField("sandeep");
         username.setUIID("TextFieldBlack");
         addStringValue("Username", username);
+        
+         TextField cin = new TextField("cin");
+        username.setUIID("TextFieldBlack");
+        addStringValue("cin", cin);
+        
+        TextField prenom = new TextField("prenom");
+        username.setUIID("TextFieldBlack");
+        addStringValue("prenom", prenom);
+        
+        TextField adresse = new TextField("adresse");
+        username.setUIID("TextFieldBlack");
+        addStringValue("adresse", adresse);
+        
+       
 
         TextField email = new TextField("sandeep@gmail.com", "E-Mail", 20, TextField.EMAILADDR);
         email.setUIID("TextFieldBlack");
         addStringValue("E-Mail", email);
+        
+        Label lblGenre = new Label ("genre");
+        OnOffSwitch onOff = new OnOffSwitch();
+        onOff.setOn("Femme");
+        onOff.setOff("Homme");
         
         TextField password = new TextField("sandeep", "Password", 20, TextField.PASSWORD);
         password.setUIID("TextFieldBlack");
@@ -108,4 +128,6 @@ public class ProfileForm extends BaseForm {
                 add(BorderLayout.CENTER, v));
         add(createLineSeparator(0xeeeeee));
     }
+
+
 }
